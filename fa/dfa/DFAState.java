@@ -1,4 +1,5 @@
 package fa.dfa;
+
 import fa.State;
 
 import java.util.HashMap;
@@ -18,11 +19,11 @@ public class DFAState extends State {
 	 * Transition map, Character is input and state is where the transition goes to
 	 */
 	private HashMap<Character, DFAState> delta;
-	private boolean acceptState; // boolean has default value of false
+	private boolean isFinal; // boolean has default value of false
 
 	/**
 	 * Constructor for DFA State. Initilizes the variables of the name for the
-	 * state, delta hashmap, boolean for acceptState, the acceptState is selected to
+	 * state, delta hashmap, boolean for isFinal, the boolean isFinal is selected to
 	 * be false if the constructor does not contain an argument to select the
 	 * acceptState status.
 	 * 
@@ -41,19 +42,19 @@ public class DFAState extends State {
 	 * @param name
 	 * @param acceptState
 	 */
-	public DFAState(String name, boolean acceptState) {
+	public DFAState(String name, boolean isFinal) {
 		this.name = name;
-		this.acceptState = acceptState;
+		this.isFinal = isFinal;
 		delta = new HashMap<Character, DFAState>();
 	}
 
 	/**
-	 * Returns whether the current DFA State is an accept state
+	 * Returns whether the current DFA State is a final state
 	 * 
-	 * @return Boolean of accept state status
+	 * @return Boolean of final state status
 	 */
-	private boolean isAcceptState() {
-		return acceptState;
+	private boolean isFinalState() {
+		return isFinal;
 	}
 
 	/**
