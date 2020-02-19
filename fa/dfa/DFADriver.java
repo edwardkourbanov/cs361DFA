@@ -1,4 +1,4 @@
-package p1_files_testCases.fa.dfa;
+package fa.dfa;
 
 import java.io.File;
 import java.io.FileNotFoundException;

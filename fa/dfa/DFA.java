@@ -1,4 +1,7 @@
-package p1_files_testCases.fa.dfa;
+package fa.dfa;
+
+import fa.FAInterface;
+import fa.State;
 
 public class DFA implements DFAInterface {
 
